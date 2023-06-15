@@ -33,7 +33,7 @@ public class Contacto extends HttpServlet {
         out.println("<head>");
         out.println("<title>Grupal 01</title>");
         out.println("</head>");
-        out.println("<body style=\"background-color:SlateBlue; color:White;\">");
+        out.println("<body style=\"background-color:DarkBlue; color:White; text-align:center;\">");
         out.println("<h1>Contacto</h1>");
         out.println("<form method=\"post\" action=\"Enviado\">");
         out.println("<label for=\"name\">Nombre:</label>");

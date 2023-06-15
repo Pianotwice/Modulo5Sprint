@@ -37,7 +37,7 @@ public class Enviado extends HttpServlet {
         out.println("<head>");
         out.println("<title>Grupal 01</title>");
         out.println("</head>");
-        out.println("<body style=\"background-color:SlateBlue; color:White;\">");
+        out.println("<body style=\"background-color:DarkBlue; color:White; text-align:center;\">");
         out.println("<h1>Los datos de contacto han sido enviados exitosamente.</h1>");
         out.println("<p>Nombre: " + name + "</p>");
         out.println("<p>Email: " + email + "</p>");

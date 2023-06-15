@@ -22,7 +22,7 @@ public class Index extends HttpServlet {
         out.println("<head>");
         out.println("<title>Grupal 01</title>");
         out.println("</head>");
-        out.println("<body style=\"background-color:SlateBlue; color:White;\">");
+        out.println("<body style=\"background-color:DarkBlue; color:White;\">");
         out.println("<h1>Desarrollo de aplicaciones web dinámicas con Java</h1>");
         out.println("<p>\tProyecto web dinámico utilizando la herramienta Eclipse en su distribución Eclipse IDE For Enterprise Java Developer.</p>");
         out.println("<h3>Menú:</h3>");
