@@ -12,8 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Index")
 public class Index extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+	public Index() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         
         // Escribir el contenido HTML de la página de inicio
@@ -27,8 +35,9 @@ public class Index extends HttpServlet {
         out.println("<p>\tProyecto web dinámico utilizando la herramienta Eclipse en su distribución Eclipse IDE For Enterprise Java Developer.</p>");
         out.println("<h3>Menú:</h3>");
         out.println("<ul>");
-        out.println("<li><a href=\"Login\" style=\"color:White;\">Iniciar sesión</a></li>");
+        out.println("<li><a href=\"Login\" style=\"color:White;\">Iniciar sesion</a></li>");
         out.println("<li><a href=\"Contacto\" style=\"color:White;\">Contacto</a></li>");
+        out.println("<li><a href=\"Capacitacion\" style=\"color:White;\">Capacitacion</a></li>");
         out.println("</ul>");
         out.println("</body>");
         out.println("</html>");

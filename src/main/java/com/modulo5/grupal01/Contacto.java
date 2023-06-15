@@ -40,6 +40,7 @@ public class Contacto extends HttpServlet {
         out.println("<input type=\"text\" name=\"name\" id=\"name\"><br><br>");
         out.println("<label for=\"email\">Email:</label>");
         out.println("<input type=\"email\" name=\"email\" id=\"email\"><br><br>");
+        out.println("<p>Aqui voy a colocar un cuadro de texto.</p>");
         out.println("<input type=\"submit\" value=\"Enviar\">");
         out.println("</form>");
         out.println("</body>");
