@@ -1,7 +1,10 @@
 package com.modulo5.grupal01;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,22 +31,48 @@ public class Capacitacion extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// Mostrar el formulario para crear una nueva capacitación
-	    PrintWriter out = response.getWriter();
-	    out.println("<html>");
-	    out.println("<head>");
-	    out.println("<title>Grupal 01</title>");
-	    out.println("</head>");
-	    out.println("<body style=\"background-color:DarkBlue; color:White; text-align:center;\">");
-	    out.println("<h1>Crear capacitación</h1>");
-	    out.println("<form method=\"post\">");
-	    out.println("Nombre: <input type=\"text\" name=\"nombre\"><br><br>");
-	    out.println("Horario: <input type=\"text\" name=\"horario\"> (HH:mm - HH:mm)<br><br>");
-	    out.println("Fecha: <input type=\"text\" name=\"fecha\"><br><br>");
-	    out.println("<input type=\"submit\" value=\"Crear\">");
-	    out.println("</form>");
-	    out.println("</body>");
-	    out.println("</html>");
+		
+		// Obtener el contenido de la plantilla HTML desde un archivo externo
+        InputStream templateStream = getServletContext().getResourceAsStream("templates/plantilla01.html");
+        InputStreamReader templateReader = new InputStreamReader(templateStream, StandardCharsets.UTF_8);
+        
+        // Leer el contenido de la plantilla y guardar en una cadena
+        StringBuilder templateContentBuilder = new StringBuilder();
+        char[] buffer = new char[4096];
+        int charsRead;
+        while ((charsRead = templateReader.read(buffer)) != -1) {
+            templateContentBuilder.append(buffer, 0, charsRead);
+        }
+        String templateContent = templateContentBuilder.toString();
+        
+        // Generar el contenido específico de la página
+        String pageContent = "<h1 class=\"text-center\">Crear capacitación</h1>"
+        					+ "<div class=\"container\">"
+        						+ "<form class=\"custom-form\" method=\"post\">"
+        							+ "<div class=\"mb-3\">"
+        								+ "<label for=\"name\" class=\"form-label\">Nombre:</label>"
+        								+ "<input type=\"text\" class=\"form-control\" id=\"name\">"
+        							+ "</div>"
+        							+ "<div class=\"mb-3\">"
+    									+ "<label for=\"time\" class=\"form-label\">Horario:</label>"
+    									+ "<input type=\"text\" class=\"form-control\" placeholder=\"(HH:mm - HH:mm)\" id=\"time\">"
+    								+ "</div>"
+        							+ "<div class=\"mb-3\">"
+    									+ "<label for=\"date\" class=\"form-label\">Fecha:</label>"
+    									+ "<input type=\"text\" class=\"form-control\" id=\"date\">"
+    								+ "</div>"
+    								+ "<button type=\"submit\" class=\"btn btn-primary\">Enviar</button>"
+    							+ "</form>"
+    						+ "</div>";
+        
+        // Reemplazar la etiqueta <main> en la plantilla con el contenido específico de la página
+        String finalContent = templateContent.replace("<main></main>", "<main>" + pageContent + "</main>");
+        
+        // Establecer el tipo de contenido de la respuesta
+        response.setContentType("text/html");
+        
+        // Escribir el contenido en la respuesta del servlet
+        response.getWriter().write(finalContent);
 	}
 
 	/**
