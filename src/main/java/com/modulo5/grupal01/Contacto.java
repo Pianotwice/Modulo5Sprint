@@ -43,7 +43,7 @@ public class Contacto extends HttpServlet {
         String templateContent = templateContentBuilder.toString();
         
         // Generar el contenido específico de la página
-        String pageContent = "<h1>Contacto</h1>"
+        String pageContent = "<h1 class=\"text-center\">Contacto</h1>"
         					+ "<div class=\"container\">"
         						+ "<form class=\"custom-form\" method=\"post\" action=\"Enviado\">"
         							+ "<div class=\"mb-3\">"
