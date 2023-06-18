@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+body {
+    background-color: #112240;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+main {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.custom-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
