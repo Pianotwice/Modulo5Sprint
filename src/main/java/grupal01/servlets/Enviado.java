@@ -1,4 +1,4 @@
-package com.modulo5.grupal01;
+package grupal01.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
