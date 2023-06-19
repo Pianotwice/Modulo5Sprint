@@ -17,10 +17,17 @@
         	<ul>
             	<li><a href="Index">Inicio</a></li>
             	<li class="dropdown">
+                	<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
+                	<ul class="dropdown-menu">
+                    	<li><a class="dropdown-item" href="UsuarioControlador">Ingresar Usuario</a></li>
+                    	<li><a class="dropdown-item" href="ListaUsuarios">Listar Usuarios</a></li>
+                	</ul>
+            	</li>
+            	<li class="dropdown">
                 	<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capacitaciones</a>
                 	<ul class="dropdown-menu">
-                    	<li><a class="dropdown-item" href="Capacitacion">Ingresar Capacitacion</a></li>
-                    	<li><a class="dropdown-item" href="ListaCapacitaciones">Listar Capacitacion</a></li>
+                    	<li><a class="dropdown-item" href="CapacitacionControlador">Ingresar Capacitacion</a></li>
+                    	<li><a class="dropdown-item" href="ListaCapacitaciones">Listar Capacitaciones</a></li>
                 	</ul>
             	</li>
             	<li><a href="Contacto">Contacto</a></li>
@@ -41,7 +48,7 @@
 
     <footer class="fixed-bottom w-100">
         <p>© Copyright Jun 2023 | <a class="text-light custom-link text-decoration-none" href="https://www.facebook.com/iEtzel">Etzel M. Valderrama</a></p>
-        <p class="text-left"><a class="text-light custom-link " href="DescripcionActividad">Criterio de evaluacion para este grupal</a></p>
+        <p class="text-left"><a class="text-light custom-link " href="DescripcionActividad" target="_blank">Criterio de evaluacion para esta actividad</a></p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

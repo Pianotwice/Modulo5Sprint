@@ -2,21 +2,21 @@
 <%@ page import="java.util.List" %>
 
 <div class="container text-center">
-    <h1>Lista de Capacitaciones</h1>
+    <h1>Lista de Usuarios</h1>
     <table class="table table-dark table-bordered">
         <thead>
             <tr>
+                <th>RUN</th>
                 <th>Nombre</th>
-                <th>Horario</th>
-                <th>Fecha</th>
+                <th>Fecha de Nacimiento</th>
             </tr>
         </thead>
         <tbody>
-            <% for (grupal.modelo.Capacitacion capacitacion : (List<grupal.modelo.Capacitacion>) request.getAttribute("capacitaciones")) { %>
+            <% for (grupal.modelo.Usuario user : (List<grupal.modelo.Usuario>) request.getAttribute("usuarios")) { %>
             <tr>
-                <td><%= capacitacion.getNombre() %></td>
-                <td><%= capacitacion.getHorario() %></td>
-                <td><%= capacitacion.getFecha() %></td>
+                <td><%= user.getRun() %></td>
+                <td><%= user.getNombre() %></td>
+                <td><%= user.getFechaNacimiento() %></td>
             </tr>
             <% } %>
         </tbody>
