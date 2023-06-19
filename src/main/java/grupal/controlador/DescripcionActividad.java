@@ -1,4 +1,4 @@
-package grupal.servlets;
+package grupal.controlador;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -31,7 +31,7 @@ public class DescripcionActividad extends HttpServlet {
         response.setContentType("application/pdf");
 
         // Obtén la ruta del archivo PDF
-        String rutaPDF = "files/CriterioDeEvaluacion.pdf";
+        String rutaPDF = "files/CriterioDeEvaluacion4.pdf";
 
         // Envía el archivo PDF como respuesta
         response.sendRedirect(rutaPDF);
