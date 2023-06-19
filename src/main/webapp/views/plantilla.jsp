@@ -12,16 +12,22 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header class="text-center">
-        <nav class="d-inline-block">
-            <ul>
-                <li><a href="Index">Inicio</a></li>
-                <li><a href="Capacitacion">Capacitaciones</a></li>
-                <li><a href="Contacto">Contacto</a></li>
-                <li><a href="#Login">Iniciar sesion</a></li>
-            </ul>
-        </nav>
-    </header>
+	<header class="text-center">
+    	<nav class="d-inline-block">
+        	<ul>
+            	<li><a href="Index">Inicio</a></li>
+            	<li class="dropdown">
+                	<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capacitaciones</a>
+                	<ul class="dropdown-menu">
+                    	<li><a class="dropdown-item" href="Capacitacion">Ingresar Capacitacion</a></li>
+                    	<li><a class="dropdown-item" href="ListaCapacitaciones">Listar Capacitacion</a></li>
+                	</ul>
+            	</li>
+            	<li><a href="Contacto">Contacto</a></li>
+            	<li><a href="Login">Iniciar sesión</a></li>
+        	</ul>
+    	</nav>
+	</header>
 
     <main>
     	<jsp:include page="${contenido}"/>

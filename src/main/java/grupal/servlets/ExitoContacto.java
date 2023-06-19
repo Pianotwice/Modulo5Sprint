@@ -1,4 +1,4 @@
-package grupal01.servlets;
+package grupal.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -34,7 +34,7 @@ public class ExitoContacto extends HttpServlet {
         request.setAttribute("email", email);
         request.setAttribute("mensaje", mensaje);
         
-     // Establecer la página específica a incluir en el template.jsp
+		// Establecer la página específica a incluir en la plantilla
 	    request.setAttribute("contenido", "exito_contacto.jsp");
 
 	    // Redirigir a la vista
