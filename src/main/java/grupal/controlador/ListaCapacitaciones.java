@@ -1,4 +1,4 @@
-package grupal.servlets;
+package grupal.controlador;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import grupal.models.Capacitacionm;
+import grupal.modelo.Capacitacion;
 
 /**
  * Servlet implementation class ListaCapacitaciones
@@ -21,7 +21,7 @@ public class ListaCapacitaciones extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	// Lista para almacenar las capacitaciones
-    private List<Capacitacionm> capacitaciones;
+    private List<Capacitacion> capacitaciones;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -52,8 +52,8 @@ public class ListaCapacitaciones extends HttpServlet {
 
             // Validar si los datos no son nulos
             if (nombre != null && !nombre.isEmpty() && horario != null && !horario.isEmpty() && fecha != null && !fecha.isEmpty()) {
-                // Crear una instancia de Capacitacionm y establecer los datos
-                Capacitacionm capacitacion = new Capacitacionm();
+                // Crear una instancia de CapacitacionControlador y establecer los datos
+                Capacitacion capacitacion = new Capacitacion();
                 capacitacion.setNombre(nombre);
                 capacitacion.setHorario(horario);
                 capacitacion.setFecha(fecha);

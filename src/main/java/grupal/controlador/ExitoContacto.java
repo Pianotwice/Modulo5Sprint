@@ -1,4 +1,4 @@
-package grupal.servlets;
+package grupal.controlador;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

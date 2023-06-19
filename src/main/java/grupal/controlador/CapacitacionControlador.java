@@ -1,4 +1,4 @@
-package grupal.servlets;
+package grupal.controlador;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Capacitacion
+ * Servlet implementation class CapacitacionControlador
  */
-@WebServlet("/Capacitacion")
-public class Capacitacion extends HttpServlet {
+@WebServlet("/CapacitacionControlador")
+public class CapacitacionControlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Capacitacion() {
+    public CapacitacionControlador() {
         super();
         // TODO Auto-generated constructor stub
     }
