@@ -32,7 +32,7 @@ public class Login extends HttpServlet {
 	    request.setAttribute("contenido", "login.jsp");
 
 	    // Redirigir a la vista
-	    request.getRequestDispatcher("views/plantilla.jsp").forward(request, response);
+	    request.getRequestDispatcher("views/plantilla_login.jsp").forward(request, response);
 	}
 
 	/**

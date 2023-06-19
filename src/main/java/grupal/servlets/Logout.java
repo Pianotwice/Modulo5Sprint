@@ -34,8 +34,8 @@ public class Logout extends HttpServlet {
             session.invalidate();
         }
 
-        // Redirigir al Inicio después del cierre de sesión exitoso
-        response.sendRedirect("Index");
+        // Redirigir al Login después del cierre de sesión exitoso
+        response.sendRedirect("Login");
 	}
 
 	/**
