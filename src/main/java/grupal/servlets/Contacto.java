@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Contacto
@@ -24,13 +25,20 @@ public class Contacto extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
-		// Establecer la página específica a incluir en la plantilla
-	    request.setAttribute("contenido", "contacto.jsp");
+    	// Verificar si el usuario ha iniciado sesión
+    	HttpSession session = request.getSession();
+        if (session.getAttribute("usuario") != null) {
+        	// Establecer la página específica a incluir en la plantilla
+    	    request.setAttribute("contenido", "contacto.jsp");
 
-	    // Redirigir a la vista
-	    request.getRequestDispatcher("views/plantilla.jsp").forward(request, response);
+    	    // Redirigir a la vista
+    	    request.getRequestDispatcher("views/plantilla.jsp").forward(request, response);
+        } else {
+            // Si el usuario no ha iniciado sesión, redirigir al formulario de inicio de sesión
+            response.sendRedirect("Login");
+        }
     }
-
+        
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }

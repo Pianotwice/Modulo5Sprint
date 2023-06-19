@@ -24,7 +24,13 @@
                 	</ul>
             	</li>
             	<li><a href="Contacto">Contacto</a></li>
-            	<li><a href="Login">Iniciar sesión</a></li>
+            	<% // Verificar si el usuario ha iniciado sesión
+            	String usuario = (String) session.getAttribute("usuario");
+            	if (usuario != null) { %>
+            		<li><a href="Logout">Cerrar sesión</a></li>
+            	<% } else { %>
+            		<li><a href="Login">Iniciar sesión</a></li>
+            	<% } %>
         	</ul>
     	</nav>
 	</header>
