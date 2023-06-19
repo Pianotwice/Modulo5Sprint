@@ -74,8 +74,6 @@ public class ListaCapacitaciones extends HttpServlet {
             // Si el usuario no ha iniciado sesión, redirigir al formulario de inicio de sesión
             response.sendRedirect("Login");
         }
-		
-		
 	}
 
 	/**
