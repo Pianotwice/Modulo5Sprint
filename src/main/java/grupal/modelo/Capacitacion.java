@@ -1,12 +1,16 @@
-package grupal.models;
+package grupal.modelo;
 
-public class Capacitacionm {
+/**
+ * @author Etzel M. Valderrama
+ *
+ */
+public class Capacitacion {
 	
 	private String nombre;
     private String horario;
     private String fecha;
 
-    public Capacitacionm() {
+    public Capacitacion() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -34,4 +38,9 @@ public class Capacitacionm {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
+
+	@Override
+	public String toString() {
+		return "Capacitacion [nombre=" + nombre + ", horario=" + horario + ", fecha=" + fecha + "]";
+	}
 }
