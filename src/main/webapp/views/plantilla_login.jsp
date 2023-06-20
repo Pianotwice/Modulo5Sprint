@@ -25,7 +25,8 @@
     </main>
 
     <footer class="fixed-bottom w-100">
-        <p>© Copyright Jun 2023 | <a class="text-light custom-link text-decoration-none" href="https://www.facebook.com/iEtzel">Etzel M. Valderrama</a></p>
+        <p>© Copyright Jun 2023 | <a class="text-light custom-link text-decoration-none" href="https://www.facebook.com/iEtzel">Etzel M. Valderrama</a>
+        	| <a>Ricardo Silva</a></p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
