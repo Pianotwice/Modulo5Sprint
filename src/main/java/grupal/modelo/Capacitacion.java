@@ -6,6 +6,7 @@ package grupal.modelo;
  */
 public class Capacitacion {
 	
+	private int id;
 	private String nombre;
     private String horario;
     private String fecha;
@@ -15,29 +16,75 @@ public class Capacitacion {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * @param id
+	 * @param nombre
+	 * @param horario
+	 * @param fecha
+	 */
+	public Capacitacion(int id, String nombre, String horario, String fecha) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.horario = horario;
+		this.fecha = fecha;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @return the nombre
+	 */
 	public String getNombre() {
-        return nombre;
-    }
+		return nombre;
+	}
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+	/**
+	 * @return the horario
+	 */
+	public String getHorario() {
+		return horario;
+	}
 
-    public String getHorario() {
-        return horario;
-    }
+	/**
+	 * @return the fecha
+	 */
+	public String getFecha() {
+		return fecha;
+	}
 
-    public void setHorario(String horario) {
-        this.horario = horario;
-    }
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getFecha() {
-        return fecha;
-    }
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
+	/**
+	 * @param horario the horario to set
+	 */
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+
+	/**
+	 * @param fecha the fecha to set
+	 */
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
 
 	@Override
 	public String toString() {

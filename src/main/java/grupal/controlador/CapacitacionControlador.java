@@ -1,9 +1,6 @@
 package grupal.controlador;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.ArrayList;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
