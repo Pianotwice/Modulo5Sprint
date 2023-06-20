@@ -38,10 +38,10 @@ public class ConexionBD {
 
         try {
             // Cargar el driver de MySQL
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Establecer los detalles de la conexión
-            String url = "jdbc:mysql://localhost:3306/modulo5";
+            String url = "jdbc:mysql://localhost:3306/modulo5?useSSL=false";
             String usuario = "adminmodulo5";
             String contraseña = "1234567a.";
 

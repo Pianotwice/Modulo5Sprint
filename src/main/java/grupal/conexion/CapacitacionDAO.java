@@ -25,14 +25,14 @@ public class CapacitacionDAO {
 
     public List<Capacitacion> obtenerCapacitaciones() {
         List<Capacitacion> capacitaciones = new ArrayList<>();
-        String consulta = "SELECT idm5capacitacion, nombre, horario, fecha FROM capacitacion";
+        String consulta = "SELECT idcapacitacion, nombre, horario, fecha FROM capacitacion";
 
         try (PreparedStatement statement = conexion.prepareStatement(consulta);
              ResultSet resultSet = statement.executeQuery()) {
 
             while (resultSet.next()) {
                 Capacitacion capacitacion = new Capacitacion();
-                capacitacion.setId(resultSet.getInt("idm5capacitacion"));
+                capacitacion.setId(resultSet.getInt("idcapacitacion"));
                 capacitacion.setNombre(resultSet.getString("nombre"));
                 capacitacion.setHorario(resultSet.getString("horario"));
                 capacitacion.setFecha(resultSet.getString("fecha"));
@@ -47,7 +47,7 @@ public class CapacitacionDAO {
 
     public Capacitacion obtenerCapacitacionPorId(int id) {
         Capacitacion capacitacion = null;
-        String consulta = "SELECT idm5capacitacion, nombre, horario, fecha FROM capacitacion WHERE idm5capacitacion = ?";
+        String consulta = "SELECT idcapacitacion, nombre, horario, fecha FROM capacitacion WHERE idcapacitacion = ?";
 
         try (PreparedStatement statement = conexion.prepareStatement(consulta)) {
             statement.setInt(1, id);
@@ -55,7 +55,7 @@ public class CapacitacionDAO {
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
                     capacitacion = new Capacitacion();
-                    capacitacion.setId(resultSet.getInt("idm5capacitacion"));
+                    capacitacion.setId(resultSet.getInt("idcapacitacion"));
                     capacitacion.setNombre(resultSet.getString("nombre"));
                     capacitacion.setHorario(resultSet.getString("horario"));
                     capacitacion.setFecha(resultSet.getString("fecha"));
@@ -84,7 +84,7 @@ public class CapacitacionDAO {
     }
 
     public void actualizarCapacitacion(Capacitacion capacitacion) {
-        String consulta = "UPDATE capacitacion SET nombre = ?, horario = ?, fecha = ? WHERE idm5capacitacion = ?";
+        String consulta = "UPDATE capacitacion SET nombre = ?, horario = ?, fecha = ? WHERE idcapacitacion = ?";
 
         try (PreparedStatement statement = conexion.prepareStatement(consulta)) {
             statement.setString(1, capacitacion.getNombre());
@@ -98,7 +98,7 @@ public class CapacitacionDAO {
     }
 
     public void eliminarCapacitacion(int id) {
-        String consulta = "DELETE FROM capacitacion WHERE idm5capacitacion = ?";
+        String consulta = "DELETE FROM capacitacion WHERE idcapacitacion = ?";
 
         try (PreparedStatement statement = conexion.prepareStatement(consulta)) {
             statement.setInt(1, id);
