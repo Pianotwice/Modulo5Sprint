@@ -19,10 +19,10 @@ public class CapacitacionDAO {
 
     public CapacitacionDAO() {
     	// Obtener la conexión al crear una instancia de CapacitacionDAO
-        ConexionBD conexionBD = ConexionBD.getInstancia();
-        conexion = conexionBD.getConexion();
+    	conexion = ConexionBD.getInstancia().getConexion();
     }
-
+    
+    // Métodos CRUD
     public List<Capacitacion> obtenerCapacitaciones() {
         List<Capacitacion> capacitaciones = new ArrayList<>();
         String consulta = "SELECT idcapacitacion, nombre, horario, fecha FROM capacitacion";

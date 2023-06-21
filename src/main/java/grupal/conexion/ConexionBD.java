@@ -15,6 +15,9 @@ public class ConexionBD {
     private static Connection conexion;
 
     private ConexionBD() {
+    	// Establecer la conexión a la base de datos en el constructor privado
+        // Usar Singleton para asegurar que solo haya una instancia de ConexionBD
+        // y una única conexión a la base de datos en todo el proyecto
         conexion = obtenerConexion();
     }
 
@@ -33,8 +36,6 @@ public class ConexionBD {
     	if (conexion != null) {
             return conexion;
         }
-
-        //Connection conexion = null;
 
         try {
             // Cargar el driver de MySQL
