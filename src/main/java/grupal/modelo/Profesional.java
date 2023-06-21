@@ -15,13 +15,14 @@ public class Profesional extends Usuario {
 	}
 
 	/**
+	 * @param id
 	 * @param run
 	 * @param nombre
 	 * @param apellido
 	 * @param fechaNacimiento
 	 */
-	public Profesional(String run, String nombre, String apellido, String fechaNacimiento) {
-		super(run, nombre, apellido, fechaNacimiento);
+	public Profesional(int id, String run, String nombre, String apellido, String fechaNacimiento) {
+		super(id, run, nombre, apellido, fechaNacimiento);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -36,6 +37,7 @@ public class Profesional extends Usuario {
 	}
 
 	/**
+	 * @param id
 	 * @param run
 	 * @param nombre
 	 * @param apellido
@@ -43,9 +45,9 @@ public class Profesional extends Usuario {
 	 * @param titulo
 	 * @param fechaIngreso
 	 */
-	public Profesional(String run, String nombre, String apellido, String fechaNacimiento, String titulo,
+	public Profesional(int id, String run, String nombre, String apellido, String fechaNacimiento, String titulo,
 			String fechaIngreso) {
-		super(run, nombre, apellido, fechaNacimiento);
+		super(id, run, nombre, apellido, fechaNacimiento);
 		this.titulo = titulo;
 		this.fechaIngreso = fechaIngreso;
 	}

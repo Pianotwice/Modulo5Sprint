@@ -15,13 +15,38 @@ public class Cliente extends Usuario {
 	}
 
 	/**
+	 * @param id
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 * @param edad
+	 * @param afp
+	 * @param direccion
+	 * @param comuna
+	 * @param telefono
+	 * @param sistemaSalud
+	 */
+	public Cliente(int id, String run, String nombre, String apellido, String fechaNacimiento, int edad, String afp,
+			String direccion, String comuna, String telefono, int sistemaSalud) {
+		super(id, run, nombre, apellido, fechaNacimiento);
+		this.edad = edad;
+		this.afp = afp;
+		this.direccion = direccion;
+		this.comuna = comuna;
+		this.telefono = telefono;
+		this.sistemaSalud = sistemaSalud;
+	}
+
+	/**
+	 * @param id
 	 * @param run
 	 * @param nombre
 	 * @param apellido
 	 * @param fechaNacimiento
 	 */
-	public Cliente(String run, String nombre, String apellido, String fechaNacimiento) {
-		super(run, nombre, apellido, fechaNacimiento);
+	public Cliente(int id, String run, String nombre, String apellido, String fechaNacimiento) {
+		super(id, run, nombre, apellido, fechaNacimiento);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -35,17 +60,6 @@ public class Cliente extends Usuario {
 	 */
 	public Cliente(int edad, String afp, String direccion, String comuna, String telefono, int sistemaSalud) {
 		super();
-		this.edad = edad;
-		this.afp = afp;
-		this.direccion = direccion;
-		this.comuna = comuna;
-		this.telefono = telefono;
-		this.sistemaSalud = sistemaSalud;
-	}
-
-	public Cliente(String run, String nombre, String apellido, String fechaNacimiento, int edad, String afp,
-			String direccion, String comuna, String telefono, int sistemaSalud) {
-		super(run, nombre, apellido, fechaNacimiento);
 		this.edad = edad;
 		this.afp = afp;
 		this.direccion = direccion;
