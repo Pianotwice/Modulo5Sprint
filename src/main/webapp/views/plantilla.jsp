@@ -16,17 +16,18 @@
     	<nav class="d-inline-block">
         	<ul>
             	<li><a href="Index">Inicio</a></li>
+            	
             	<li class="dropdown">
                 	<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
                 	<ul class="dropdown-menu">
-                    	<li><a class="dropdown-item" href="UsuarioControlador">Ingresar Usuario</a></li>
+                    	<li><a class="dropdown-item" href="CrearUsuario">Crear Usuario</a></li>
                     	<li><a class="dropdown-item" href="ListaUsuarios">Listar Usuarios</a></li>
                 	</ul>
             	</li>
             	<li class="dropdown">
                 	<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capacitaciones</a>
                 	<ul class="dropdown-menu">
-                    	<li><a class="dropdown-item" href="CapacitacionControlador">Ingresar Capacitacion</a></li>
+                    	<li><a class="dropdown-item" href="CapacitacionControlador">Crear Capacitacion</a></li>
                     	<li><a class="dropdown-item" href="ListaCapacitaciones">Listar Capacitaciones</a></li>
                 	</ul>
             	</li>

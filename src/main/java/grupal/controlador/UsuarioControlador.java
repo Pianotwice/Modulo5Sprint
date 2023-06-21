@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class UsuarioControlador
  */
-@WebServlet("/UsuarioControlador")
+@WebServlet("/CrearUsuario")
 public class UsuarioControlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
