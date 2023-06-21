@@ -1,10 +1,6 @@
 package grupal.modelo;
 
-/**
- * @author Etzel M. Valderrama
- *
- */
-public class Cliente {
+public class Cliente extends Usuario {
 	
 	private int edad;
 	private String afp;
@@ -15,6 +11,17 @@ public class Cliente {
 	
 	public Cliente() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 */
+	public Cliente(String run, String nombre, String apellido, String fechaNacimiento) {
+		super(run, nombre, apellido, fechaNacimiento);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -36,86 +43,61 @@ public class Cliente {
 		this.sistemaSalud = sistemaSalud;
 	}
 
-	/**
-	 * @return the edad
-	 */
+	public Cliente(String run, String nombre, String apellido, String fechaNacimiento, int edad, String afp,
+			String direccion, String comuna, String telefono, int sistemaSalud) {
+		super(run, nombre, apellido, fechaNacimiento);
+		this.edad = edad;
+		this.afp = afp;
+		this.direccion = direccion;
+		this.comuna = comuna;
+		this.telefono = telefono;
+		this.sistemaSalud = sistemaSalud;
+	}
+
 	public int getEdad() {
 		return edad;
 	}
 
-	/**
-	 * @return the afp
-	 */
-	public String getAfp() {
-		return afp;
-	}
-
-	/**
-	 * @return the direccion
-	 */
-	public String getDireccion() {
-		return direccion;
-	}
-
-	/**
-	 * @return the comuna
-	 */
-	public String getComuna() {
-		return comuna;
-	}
-
-	/**
-	 * @return the telefono
-	 */
-	public String getTelefono() {
-		return telefono;
-	}
-
-	/**
-	 * @return the sistemaSalud
-	 */
-	public int getSistemaSalud() {
-		return sistemaSalud;
-	}
-
-	/**
-	 * @param edad the edad to set
-	 */
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
 
-	/**
-	 * @param afp the afp to set
-	 */
+	public String getAfp() {
+		return afp;
+	}
+
 	public void setAfp(String afp) {
 		this.afp = afp;
 	}
 
-	/**
-	 * @param direccion the direccion to set
-	 */
+	public String getDireccion() {
+		return direccion;
+	}
+
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
 
-	/**
-	 * @param comuna the comuna to set
-	 */
+	public String getComuna() {
+		return comuna;
+	}
+
 	public void setComuna(String comuna) {
 		this.comuna = comuna;
 	}
 
-	/**
-	 * @param telefono the telefono to set
-	 */
+	public String getTelefono() {
+		return telefono;
+	}
+
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 
-	/**
-	 * @param sistemaSalud the sistemaSalud to set
-	 */
+	public int getSistemaSalud() {
+		return sistemaSalud;
+	}
+
 	public void setSistemaSalud(int sistemaSalud) {
 		this.sistemaSalud = sistemaSalud;
 	}
