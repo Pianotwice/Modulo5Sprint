@@ -32,7 +32,7 @@
 			<td><%= administrativo.getArea() %></td>
 			<td><%= administrativo.getExpPrevia() %></td>
             <td>
-                <a href="EditarAdministrativo?run=<%= administrativo.getRun() %>" class="btn btn-success">Editar</a>
+                <a href="EditarAdministrativo?id=<%= administrativo.getId() %>" class="btn btn-success">Editar</a>
             </td>
         </tr>
         <% count++; %>

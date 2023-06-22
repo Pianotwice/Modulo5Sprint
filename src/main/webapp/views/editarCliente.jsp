@@ -25,7 +25,7 @@
         </div>
         <div class="form-group mb-3">
             <label for="edad">Edad:</label>
-            <input type="number" class="form-control" id="edad" name="edad" value="${cliente.edad}" required>
+            <input type="text" class="form-control" id="edad" name="edad" value="${cliente.edad}" required>
         </div>
         <div class="form-group mb-3">
             <label for="afp">AFP:</label>
