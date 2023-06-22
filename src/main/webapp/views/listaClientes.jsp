@@ -40,7 +40,7 @@
             <td><%= cliente.getTelefono() %></td>
             <td><%= cliente.getSistemaSalud() %></td>
             <td>
-                <a href="EditarCliente?run=<%= cliente.getRun() %>" class="btn btn-success">Editar</a>
+                <a href="EditarCliente?id=<%= cliente.getId() %>" class="btn btn-success">Editar</a>
             </td>
         </tr>
         <% count++; %>
