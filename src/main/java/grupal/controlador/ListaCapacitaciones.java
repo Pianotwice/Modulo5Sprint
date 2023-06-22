@@ -71,7 +71,7 @@ public class ListaCapacitaciones extends HttpServlet {
             request.setAttribute("capacitaciones", capacitaciones);
             
             // Establecer la página específica a incluir en la plantilla
-            request.setAttribute("contenido", "lista_capacitaciones.jsp");
+            request.setAttribute("contenido", "listaCapacitaciones.jsp");
 
             // Redirigir a la vista
             request.getRequestDispatcher("views/plantilla.jsp").forward(request, response);

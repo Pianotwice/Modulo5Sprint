@@ -16,12 +16,20 @@
     	<nav class="d-inline-block">
         	<ul>
             	<li><a href="Index">Inicio</a></li>
-            	
             	<li class="dropdown">
-                	<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
+                	<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Crear Usuario</a>
                 	<ul class="dropdown-menu">
-                    	<li><a class="dropdown-item" href="CrearUsuario">Crear Usuario</a></li>
-                    	<li><a class="dropdown-item" href="ListaUsuarios">Listar Usuarios</a></li>
+                    	<li><a class="dropdown-item" href="CrearCliente">Cliente</a></li>
+                    	<li><a class="dropdown-item" href="CrearProfesional">Profesional</a></li>
+                    	<li><a class="dropdown-item" href="CrearAdministrativo">Administrativo</a></li>
+                	</ul>
+            	</li>
+            	<li class="dropdown">
+                	<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Listar Usuarios</a>
+                	<ul class="dropdown-menu">
+                    	<li><a class="dropdown-item" href="ListaClientes">Cliente</a></li>
+                    	<li><a class="dropdown-item" href="ListaProfesionales">Profesional</a></li>
+                    	<li><a class="dropdown-item" href="ListaAdministrativos">Administrativo</a></li>
                 	</ul>
             	</li>
             	<li class="dropdown">
@@ -43,11 +51,11 @@
     	</nav>
 	</header>
 
-    <main>
+    <main class="mb-3 pb-3" style="min-height: 700px;">
     	<jsp:include page="${contenido}"/>
     </main>
 
-    <footer class="fixed-bottom w-100">
+    <footer class="h6">
         <p>© Copyright Jun 2023 | <a class="text-light custom-link text-decoration-none" href="https://www.facebook.com/iEtzel">Etzel M. Valderrama</a>
         	| <a>Ricardo Silva</a></p>
         <p class="text-left"><a class="text-light custom-link " href="DescripcionActividad" target="_blank">Criterio de evaluacion para esta actividad</a></p>

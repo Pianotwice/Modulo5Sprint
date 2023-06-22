@@ -28,6 +28,20 @@ public class Usuario {
 		this.apellido = apellido;
 		this.fechaNacimiento = fechaNacimiento;
 	}
+	
+	/**
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 */
+	public Usuario(String run, String nombre, String apellido, String fechaNacimiento) {
+		super();
+		this.run = run;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.fechaNacimiento = fechaNacimiento;
+	}
 
 	/**
 	 * @return the id

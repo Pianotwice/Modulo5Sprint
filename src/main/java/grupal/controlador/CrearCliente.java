@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class UsuarioControlador
+ * Servlet implementation class CrearCliente
  */
-@WebServlet("/CrearUsuario")
-public class UsuarioControlador extends HttpServlet {
+@WebServlet("/CrearCliente")
+public class CrearCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UsuarioControlador() {
+    public CrearCliente() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,7 +32,7 @@ public class UsuarioControlador extends HttpServlet {
     	HttpSession session = request.getSession();
         if (session.getAttribute("usuario") != null) {
         	// Establecer la página específica a incluir en la plantilla
-    	    request.setAttribute("contenido", "usuario.jsp");
+    	    request.setAttribute("contenido", "usuariocliente.jsp");
 
     	    // Redirigir a la vista
     	    request.getRequestDispatcher("views/plantilla.jsp").forward(request, response);
