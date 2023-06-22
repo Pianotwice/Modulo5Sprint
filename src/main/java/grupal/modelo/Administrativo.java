@@ -43,6 +43,21 @@ public class Administrativo extends Usuario {
 		this.area = area;
 		this.expPrevia = expPrevia;
 	}
+	
+	/**
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 * @param area
+	 * @param expPrevia
+	 */
+	public Administrativo(String run, String nombre, String apellido, String fechaNacimiento, String area,
+			String expPrevia) {
+		super(run, nombre, apellido, fechaNacimiento);
+		this.area = area;
+		this.expPrevia = expPrevia;
+	}
 
 	public String getArea() {
 		return area;
