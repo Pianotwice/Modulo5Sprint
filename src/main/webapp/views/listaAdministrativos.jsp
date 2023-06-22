@@ -2,35 +2,6 @@
 <%@ page import="java.util.List"%>
 
 <div class="container text-center">
-	<h1>Lista de Administrativos</h1>
-	<table class="table table-dark table-bordered">
-		<thead>
-			<tr>
-				<th>RUN</th>
-				<th>Nombre</th>
-				<th>Apellido</th>
-				<th>Fecha de Nacimiento</th>
-				<th>Area</th>
-				<th>Experiencia Previa</th>
-			</tr>
-		</thead>
-		<tbody>
-			<%
-			for (grupal.modelo.Administrativo administrativo : (List<grupal.modelo.Administrativo>) request.getAttribute("administrativos")) {
-			%>
-			<tr>
-				<td><%= administrativo.getRun() %></td>
-				<td><%= administrativo.getNombre() %></td>
-				<td><%= administrativo.getApellido() %></td>
-				<td><%= administrativo.getFechaNacimiento() %></td>
-				<td><%= administrativo.getArea() %></td>
-				<td><%= administrativo.getExpPrevia() %></td>
-			</tr>
-			<% } %>
-		</tbody>
-	</table>
-</div>
-<div class="container text-center">
     <h1>Lista de Administrativos</h1>
     <table class="table table-dark table-bordered">
         <tbody>
