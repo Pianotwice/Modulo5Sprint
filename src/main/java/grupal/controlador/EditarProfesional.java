@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import grupal.conexion.UsuarioDAO;
-import grupal.modelo.Cliente;
+import grupal.modelo.Profesional;
 import grupal.modelo.Usuario;
 
 /**
- * Servlet implementation class EditarCliente
+ * Servlet implementation class EditarProfesional
  */
-@WebServlet("/EditarCliente")
-public class EditarCliente extends HttpServlet {
+@WebServlet("/EditarProfesional")
+public class EditarProfesional extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditarCliente() {
+    public EditarProfesional() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,27 +37,27 @@ public class EditarCliente extends HttpServlet {
         HttpSession session = request.getSession();
         if (session.getAttribute("usuario") != null) {
             // Obtener el parámetro "run" de la solicitud
-        	int idCliente = Integer.parseInt(request.getParameter("id"));
+        	int idProfesional = Integer.parseInt(request.getParameter("id"));
 
-            // Obtener el cliente correspondiente al "id" proporcionado
+            // Obtener el profesional correspondiente al "id" proporcionado
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            Usuario usuario = usuarioDAO.obtenerUsuarioPorId(idCliente);
+            Usuario usuario = usuarioDAO.obtenerUsuarioPorId(idProfesional);
 
-            // Verificar si se encontró un cliente con el "id" proporcionado
-            if (usuario instanceof Cliente) {
-                Cliente cliente = (Cliente) usuario;
+            // Verificar si se encontró un profesional con el "id" proporcionado
+            if (usuario instanceof Profesional) {
+                Profesional profesional = (Profesional) usuario;
 
-                // Establecer el cliente como atributo de solicitud
-                request.setAttribute("cliente", cliente);
+                // Establecer el profesional como atributo de solicitud
+                request.setAttribute("profesional", profesional);
 
                 // Establecer la página específica a incluir en la plantilla
-                request.setAttribute("contenido", "editarCliente.jsp");
+                request.setAttribute("contenido", "editarProfesional.jsp");
 
                 // Redirigir a la vista
                 request.getRequestDispatcher("views/plantilla.jsp").forward(request, response);
             } else {
-                // Si no se encontró un cliente, redirigir a la lista de clientes
-                response.sendRedirect("ListaClientes");
+                // Si no se encontró un profesional, redirigir a la lista de profesionales
+                response.sendRedirect("ListaProfesionales");
             }
         } else {
             // Si el usuario no ha iniciado sesión, redirigir al formulario de inicio de sesión
@@ -76,22 +76,17 @@ public class EditarCliente extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String fechaNacimiento = request.getParameter("nacimiento");
-        int edad = Integer.parseInt(request.getParameter("edad"));
-        String afp = request.getParameter("afp");
-        String direccion = request.getParameter("direccion");
-        String comuna = request.getParameter("comuna");
-        String telefono = request.getParameter("telefono");
-        int sistemaSalud = Integer.parseInt(request.getParameter("sistemaSalud"));
+        String titulo = request.getParameter("titulo");
+        String fechaIngreso = request.getParameter("fechaIngreso");
 
-        // Crear un objeto Cliente con los datos proporcionados
-        Cliente cliente = new Cliente(id, run, nombre, apellido, fechaNacimiento, edad, afp, direccion, comuna, telefono,
-                sistemaSalud);
+        // Crear un objeto Profesional con los datos proporcionados
+        Profesional profesional = new Profesional(id, run, nombre, apellido, fechaNacimiento, titulo, fechaIngreso);
 
-        // Actualizar el cliente en la base de datos
+        // Actualizar el profesional en la base de datos
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-        usuarioDAO.actualizarCliente(cliente);
+        usuarioDAO.actualizarProfesional(profesional);
 
-        // Redirigir a la lista de clientes
-        response.sendRedirect("ListaClientes");
+        // Redirigir a la lista de profesionales
+        response.sendRedirect("ListaProfesionales");
     }
 }

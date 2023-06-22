@@ -32,7 +32,7 @@
 			<td><%= profesional.getTitulo() %></td>
 			<td><%= profesional.getFechaIngreso() %></td>
             <td>
-                <a href="EditarProfesional?run=<%= profesional.getRun() %>" class="btn btn-success">Editar</a>
+                <a href="EditarProfesional?id=<%= profesional.getId() %>" class="btn btn-success">Editar</a>
             </td>
         </tr>
         <% count++; %>
