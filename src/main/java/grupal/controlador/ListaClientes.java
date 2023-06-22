@@ -53,7 +53,10 @@ public class ListaClientes extends HttpServlet {
             }
             
             // Validar si los datos no son nulos
-            if (run != null && !run.isEmpty() && nombre != null && !nombre.isEmpty() && apellido != null && !apellido.isEmpty() && fechaNacimiento != null && 				!fechaNacimiento.isEmpty() && edad != null && !String.valueOf(edad).isEmpty() && afp != null && !afp.isEmpty() && direccion != null && 				!direccion.isEmpty() && comuna != null && !comuna.isEmpty() && telefono != null && !telefono.isEmpty() && sistemaSalud != null && 				!String.valueOf(sistemaSalud).isEmpty()) {
+            if (run != null && !run.isEmpty() && nombre != null && !nombre.isEmpty() && apellido != null && !apellido.isEmpty() && fechaNacimiento != null && 
+            	!fechaNacimiento.isEmpty() && edad != null && !String.valueOf(edad).isEmpty() && afp != null && !afp.isEmpty() && direccion != null && 
+            	!direccion.isEmpty() && comuna != null && !comuna.isEmpty() && telefono != null && !telefono.isEmpty() && sistemaSalud != null && 
+            	!String.valueOf(sistemaSalud).isEmpty()) {
             	
                 // Crear una instancia de Cliente y establecer los datos
             	Cliente cliente = new Cliente(run, nombre, apellido, fechaNacimiento, edad, afp, direccion, comuna, telefono, sistemaSalud);

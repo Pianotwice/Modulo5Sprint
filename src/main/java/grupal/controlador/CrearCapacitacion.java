@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class CapacitacionControlador
+ * Servlet implementation class CrearCapacitacion
  */
-@WebServlet("/CapacitacionControlador")
-public class CapacitacionControlador extends HttpServlet {
+@WebServlet("/CrearCapacitacion")
+public class CrearCapacitacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CapacitacionControlador() {
+    public CrearCapacitacion() {
         super();
         // TODO Auto-generated constructor stub
     }

@@ -51,6 +51,21 @@ public class Profesional extends Usuario {
 		this.titulo = titulo;
 		this.fechaIngreso = fechaIngreso;
 	}
+	
+	/**
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 * @param titulo
+	 * @param fechaIngreso
+	 */
+	public Profesional(String run, String nombre, String apellido, String fechaNacimiento, String titulo,
+			String fechaIngreso) {
+		super(run, nombre, apellido, fechaNacimiento);
+		this.titulo = titulo;
+		this.fechaIngreso = fechaIngreso;
+	}
 
 	/**
 	 * @return the titulo
