@@ -12,23 +12,23 @@
             <input type="text" class="form-control" id="run" name="run" value="${administrativo.run}" readonly>
         </div>
         <div class="form-group mb-3">
-            <label for="nombre">Nombre:</label>
+            <label for="nombre"><span class="text-danger">*</span>Nombre:</label>
             <input type="text" class="form-control" id="nombre" name="nombre" value="${administrativo.nombre}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="apellido">Apellido:</label>
+            <label for="apellido"><span class="text-danger">*</span>Apellido:</label>
             <input type="text" class="form-control" id="apellido" name="apellido" value="${administrativo.apellido}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="nacimiento">Fecha de Nacimiento:</label>
+            <label for="nacimiento"><span class="text-danger">*</span>Fecha de Nacimiento:</label>
             <input type="text" class="form-control" id="nacimiento" name="nacimiento" value="${administrativo.fechaNacimiento}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="area">Titulo:</label>
+            <label for="area"><span class="text-danger">*</span>Area:</label>
             <input type="text" class="form-control" id="area" name="area" value="${administrativo.area}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="expPrevia">Fecha de Ingreso:</label>
+            <label for="expPrevia"><span class="text-danger">*</span>Experiencia Previa:</label>
             <input type="text" class="form-control" id="expPrevia" name="expPrevia" value="${administrativo.expPrevia}" required>
         </div>
         <button type="submit" class="btn btn-primary">Guardar Cambios</button>

@@ -12,7 +12,7 @@
             <% } %>
             <thead>
                 <tr>
-                    <th>RUN</th>
+                    <th class="col-1">RUN</th>
 					<th>Nombre</th>
 					<th>Apellido</th>
 					<th>Fecha de Nacimiento</th>
@@ -25,7 +25,7 @@
         <tbody>
         <% } %>
         <tr>
-            <td><%= administrativo.getRun() %></td>
+            <td class="col-1"><%= administrativo.getRun() %></td>
 			<td><%= administrativo.getNombre() %></td>
 			<td><%= administrativo.getApellido() %></td>
 			<td><%= administrativo.getFechaNacimiento() %></td>

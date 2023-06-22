@@ -37,6 +37,10 @@ public class ExitoContacto extends HttpServlet {
             request.setAttribute("nombre", nombre);
             request.setAttribute("email", email);
             request.setAttribute("mensaje", mensaje);
+            
+            System.out.println("\tNombre: " + nombre);
+            System.out.println("\tEmail: " + email);
+            System.out.println("\tConsulta: " + mensaje);
 
             // Establecer la página específica a incluir en la plantilla
             request.setAttribute("contenido", "exitoContacto.jsp");

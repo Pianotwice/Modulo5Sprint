@@ -12,39 +12,39 @@
             <input type="text" class="form-control" id="run" name="run" value="${cliente.run}" readonly>
         </div>
         <div class="form-group mb-3">
-            <label for="nombre">Nombre:</label>
+            <label for="nombre"><span class="text-danger">*</span>Nombre:</label>
             <input type="text" class="form-control" id="nombre" name="nombre" value="${cliente.nombre}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="apellido">Apellido:</label>
+            <label for="apellido"><span class="text-danger">*</span>Apellido:</label>
             <input type="text" class="form-control" id="apellido" name="apellido" value="${cliente.apellido}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="nacimiento">Fecha de Nacimiento:</label>
+            <label for="nacimiento"><span class="text-danger">*</span>Fecha de Nacimiento:</label>
             <input type="text" class="form-control" id="nacimiento" name="nacimiento" value="${cliente.fechaNacimiento}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="edad">Edad:</label>
+            <label for="edad"><span class="text-danger">*</span>Edad:</label>
             <input type="text" class="form-control" id="edad" name="edad" value="${cliente.edad}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="afp">AFP:</label>
+            <label for="afp"><span class="text-danger">*</span>AFP:</label>
             <input type="text" class="form-control" id="afp" name="afp" value="${cliente.afp}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="direccion">Dirección:</label>
+            <label for="direccion"><span class="text-danger">*</span>Dirección:</label>
             <input type="text" class="form-control" id="direccion" name="direccion" value="${cliente.direccion}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="comuna">Comuna:</label>
+            <label for="comuna"><span class="text-danger">*</span>Comuna:</label>
             <input type="text" class="form-control" id="comuna" name="comuna" value="${cliente.comuna}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="telefono">Teléfono:</label>
+            <label for="telefono"><span class="text-danger">*</span>Teléfono:</label>
             <input type="text" class="form-control" id="telefono" name="telefono" value="${cliente.telefono}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="sistemaSalud">Sistema de Salud:</label>
+            <label for="sistemaSalud"><span class="text-danger">*</span>Sistema de Salud:</label>
             <select class="form-control" id="sistemaSalud" name="sistemaSalud" required>
                 <option value="1" ${cliente.sistemaSalud == 1 ? 'selected' : ''}>Fonasa</option>
                 <option value="2" ${cliente.sistemaSalud == 2 ? 'selected' : ''}>Isapre</option>
