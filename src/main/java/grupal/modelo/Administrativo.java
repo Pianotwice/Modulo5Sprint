@@ -1,13 +1,6 @@
-/**
- * 
- */
 package grupal.modelo;
 
-/**
- * @author Etzel M. Valderrama
- *
- */
-public class Administrativo {
+public class Administrativo extends Usuario {
 	
 	private String area;
 	private String expPrevia;
@@ -18,9 +11,17 @@ public class Administrativo {
 	}
 
 	/**
-	 * @param area
-	 * @param expPrevia
+	 * @param id
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
 	 */
+	public Administrativo(int id, String run, String nombre, String apellido, String fechaNacimiento) {
+		super(id, run, nombre, apellido, fechaNacimiento);
+		// TODO Auto-generated constructor stub
+	}
+
 	public Administrativo(String area, String expPrevia) {
 		super();
 		this.area = area;
@@ -28,29 +29,48 @@ public class Administrativo {
 	}
 
 	/**
-	 * @return the area
+	 * @param id
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 * @param area
+	 * @param expPrevia
 	 */
+	public Administrativo(int id, String run, String nombre, String apellido, String fechaNacimiento, String area,
+			String expPrevia) {
+		super(id, run, nombre, apellido, fechaNacimiento);
+		this.area = area;
+		this.expPrevia = expPrevia;
+	}
+	
+	/**
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 * @param area
+	 * @param expPrevia
+	 */
+	public Administrativo(String run, String nombre, String apellido, String fechaNacimiento, String area,
+			String expPrevia) {
+		super(run, nombre, apellido, fechaNacimiento);
+		this.area = area;
+		this.expPrevia = expPrevia;
+	}
+
 	public String getArea() {
 		return area;
 	}
 
-	/**
-	 * @return the expPrevia
-	 */
-	public String getExpPrevia() {
-		return expPrevia;
-	}
-
-	/**
-	 * @param area the area to set
-	 */
 	public void setArea(String area) {
 		this.area = area;
 	}
 
-	/**
-	 * @param expPrevia the expPrevia to set
-	 */
+	public String getExpPrevia() {
+		return expPrevia;
+	}
+
 	public void setExpPrevia(String expPrevia) {
 		this.expPrevia = expPrevia;
 	}

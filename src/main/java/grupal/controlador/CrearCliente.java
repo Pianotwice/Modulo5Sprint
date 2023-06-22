@@ -6,18 +6,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class DescripcionActividad
+ * Servlet implementation class CrearCliente
  */
-@WebServlet("/DescripcionActividad")
-public class DescripcionActividad extends HttpServlet {
+@WebServlet("/CrearCliente")
+public class CrearCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DescripcionActividad() {
+    public CrearCliente() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,15 +27,19 @@ public class DescripcionActividad extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		// Verificar si el usuario ha iniciado sesión
+    	HttpSession session = request.getSession();
+        if (session.getAttribute("usuario") != null) {
+        	// Establecer la página específica a incluir en la plantilla
+    	    request.setAttribute("contenido", "usuarioCliente.jsp");
 
-		// Configura la respuesta para mostrar el contenido del PDF
-        response.setContentType("application/pdf");
-
-        // Obtén la ruta del archivo PDF
-        String rutaPDF = "files/CriterioEvaluacionSprintFinal.pdf";
-
-        // Envía el archivo PDF como respuesta
-        response.sendRedirect(rutaPDF);
+    	    // Redirigir a la vista
+    	    request.getRequestDispatcher("views/plantilla.jsp").forward(request, response);
+        } else {
+            // Si el usuario no ha iniciado sesión, redirigir al formulario de inicio de sesión
+            response.sendRedirect("Login");
+        }
 	}
 
 	/**

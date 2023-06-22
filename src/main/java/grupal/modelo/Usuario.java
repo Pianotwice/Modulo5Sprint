@@ -1,13 +1,11 @@
 package grupal.modelo;
 
-/**
- * @author Etzel M. Valderrama
- *
- */
 public class Usuario {
 	
+	protected int id;
 	protected String run;
 	protected String nombre;
+	protected String apellido;
 	protected String fechaNacimiento;
 	
 	public Usuario() {
@@ -16,15 +14,40 @@ public class Usuario {
 	}
 
 	/**
+	 * @param id
 	 * @param run
 	 * @param nombre
+	 * @param apellido
 	 * @param fechaNacimiento
 	 */
-	public Usuario(String run, String nombre, String fechaNacimiento) {
+	public Usuario(int id, String run, String nombre, String apellido, String fechaNacimiento) {
+		super();
+		this.id = id;
+		this.run = run;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	
+	/**
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 */
+	public Usuario(String run, String nombre, String apellido, String fechaNacimiento) {
 		super();
 		this.run = run;
 		this.nombre = nombre;
+		this.apellido = apellido;
 		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
 	}
 
 	/**
@@ -42,10 +65,24 @@ public class Usuario {
 	}
 
 	/**
+	 * @return the apellido
+	 */
+	public String getApellido() {
+		return apellido;
+	}
+
+	/**
 	 * @return the fechaNacimiento
 	 */
 	public String getFechaNacimiento() {
 		return fechaNacimiento;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	/**
@@ -63,6 +100,13 @@ public class Usuario {
 	}
 
 	/**
+	 * @param apellido the apellido to set
+	 */
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	/**
 	 * @param fechaNacimiento the fechaNacimiento to set
 	 */
 	public void setFechaNacimiento(String fechaNacimiento) {
@@ -71,6 +115,7 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [run=" + run + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
+		return "Usuario [id=" + id + ", run=" + run + ", nombre=" + nombre + ", apellido=" + apellido
+				+ ", fechaNacimiento=" + fechaNacimiento + "]";
 	}
 }

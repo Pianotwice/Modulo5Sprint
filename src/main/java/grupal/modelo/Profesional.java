@@ -1,15 +1,13 @@
 package grupal.modelo;
 
-import java.time.LocalDate;
-
 /**
  * @author Etzel M. Valderrama
  *
  */
-public class Profesional {
+public class Profesional extends Usuario {
 	
 	private String titulo;
-	private LocalDate fechaIngreso;
+	private String fechaIngreso;
 	
 	public Profesional() {
 		super();
@@ -17,11 +15,54 @@ public class Profesional {
 	}
 
 	/**
+	 * @param id
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 */
+	public Profesional(int id, String run, String nombre, String apellido, String fechaNacimiento) {
+		super(id, run, nombre, apellido, fechaNacimiento);
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
 	 * @param titulo
 	 * @param fechaIngreso
 	 */
-	public Profesional(String titulo, LocalDate fechaIngreso) {
+	public Profesional(String titulo, String fechaIngreso) {
 		super();
+		this.titulo = titulo;
+		this.fechaIngreso = fechaIngreso;
+	}
+
+	/**
+	 * @param id
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 * @param titulo
+	 * @param fechaIngreso
+	 */
+	public Profesional(int id, String run, String nombre, String apellido, String fechaNacimiento, String titulo,
+			String fechaIngreso) {
+		super(id, run, nombre, apellido, fechaNacimiento);
+		this.titulo = titulo;
+		this.fechaIngreso = fechaIngreso;
+	}
+	
+	/**
+	 * @param run
+	 * @param nombre
+	 * @param apellido
+	 * @param fechaNacimiento
+	 * @param titulo
+	 * @param fechaIngreso
+	 */
+	public Profesional(String run, String nombre, String apellido, String fechaNacimiento, String titulo,
+			String fechaIngreso) {
+		super(run, nombre, apellido, fechaNacimiento);
 		this.titulo = titulo;
 		this.fechaIngreso = fechaIngreso;
 	}
@@ -36,7 +77,7 @@ public class Profesional {
 	/**
 	 * @return the fechaIngreso
 	 */
-	public LocalDate getFechaIngreso() {
+	public String getFechaIngreso() {
 		return fechaIngreso;
 	}
 
@@ -50,7 +91,7 @@ public class Profesional {
 	/**
 	 * @param fechaIngreso the fechaIngreso to set
 	 */
-	public void setFechaIngreso(LocalDate fechaIngreso) {
+	public void setFechaIngreso(String fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
 	}
 
